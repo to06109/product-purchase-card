@@ -1,5 +1,6 @@
 import './App.css'
 import productImg from './assets/product.svg'
+import { useState } from 'react'
 import {
   CounterButton,
   PayButton,
@@ -9,6 +10,19 @@ import {
 } from './components'
 
 function App() {
+  const [num, setNum] = useState(1)
+
+  const minus = () => {
+    // if (num === 0) {
+    //   return setDisable(!isDisable)
+    // }
+    setNum(num - 1)
+  }
+
+  const plus = () => {
+    setNum(num + 1)
+  }
+
   return (
     <article className="productWrapper">
       <img src={productImg} alt="상품 사진" />
@@ -22,9 +36,9 @@ function App() {
       <hr width="100%" color="#DEE0E3" />
       <DeliveryInfo />
       <hr width="100%" color="#DEE0E3" />
-      <CounterButton />
+      <CounterButton num={num} minus={minus} plus={plus} />
       <hr width="100%" color="#DEE0E3" />
-      <PayInfo />
+      <PayInfo totalNum={num}/>
       <PayButton />
     </article>
   )
