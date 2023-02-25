@@ -11,15 +11,20 @@ import {
 
 function App() {
   const [num, setNum] = useState(1)
+  const [isDisabled, setDisabled] = useState(false)
 
   const minus = () => {
-    // if (num === 0) {
-    //   return setDisable(!isDisable)
-    // }
+    if (num <= 1) {
+      setNum(0)
+      return setDisabled(true)
+    }
     setNum(num - 1)
   }
 
   const plus = () => {
+    if (num >= 0) {
+      setDisabled(false)
+    }
     setNum(num + 1)
   }
 
@@ -38,8 +43,8 @@ function App() {
       <hr width="100%" color="#DEE0E3" />
       <CounterButton num={num} minus={minus} plus={plus} />
       <hr width="100%" color="#DEE0E3" />
-      <PayInfo totalNum={num}/>
-      <PayButton />
+      <PayInfo totalNum={num} />
+      <PayButton isDisabled={isDisabled} />
     </article>
   )
 }

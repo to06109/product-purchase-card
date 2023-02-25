@@ -16,6 +16,10 @@
   background: #0aae4f;
 }
 
+.PayButton:disabled {
+  background: #dee0e3;
+}
+
 .buttonLogo {
   display: inline-block;
   width: 28px;
