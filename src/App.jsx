@@ -1,33 +1,32 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import './App.css'
+import productImg from './assets/product.svg'
+import { CounterButton, PayButton, PayInfo } from './components'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
+    <article className="productWrapper">
+      <img src={productImg} alt="상품 사진" />
+      <h1 className="productTitle">
+        래피젠 코로나 자가 검사 키트
+        <span>
+          2개입<span>X</span>1박스
+        </span>
+      </h1>
+      <section className="priceInfo">
+        <strong>88%</strong>
+        <del>56,760</del>
+        <strong>6,370원</strong>
+      </section>
+      <section className="deliveryInfo">
+        <strong>택배배송</strong>
+        <strong>3,000원</strong>
+        <strong className="payPoint">(주문시 결제)</strong>
+        <p>10개마다 부과</p>
+      </section>
+      <CounterButton />
+      <PayInfo />
+      <PayButton />
+    </article>
   )
 }
 
