@@ -8,6 +8,7 @@
   width: 110px;
   height: 34px;
   gap: 16px;
+  display: none;
 }
 
 .buttonWrapper button {
