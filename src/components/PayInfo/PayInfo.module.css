@@ -1,0 +1,49 @@
+.payInfo {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  /* background-color: lightcoral; */
+}
+
+.payTitle {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 2px;
+}
+
+.payTitle strong {
+  font-weight: 700;
+  font-size: 14px;
+  color: #333333;
+}
+
+.helpButton {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+  border: 1px solid #dee0e3;
+  color: #333333;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.totalNum {
+  font-weight: 400;
+  font-size: 14px;
+  color: #999999;
+}
+
+.totalNum::after {
+  content: '';
+  border-left: 1px solid #dee0e3;
+  margin: 0 6px;
+}
+
+.totalPrice {
+  font-weight: 700;
+  font-size: 22px;
+  color: #6b90dc;
+}

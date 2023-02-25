@@ -1,0 +1,33 @@
+.deliveryService {
+  font-weight: 400;
+  font-size: 14px;
+  color: #333333;
+}
+
+.deliveryService::after {
+  content: '';
+  margin: 0 6px;
+  border-right: 1px solid #dee0e3;
+}
+
+.deliveryPrice {
+  font-weight: 700;
+  font-size: 14px;
+  color: #333333;
+  margin: 0 6px;
+}
+
+.payPoint {
+  font-weight: 700;
+  font-size: 14px;
+  color: #6b90dc;
+  letter-spacing: -0.005em;
+}
+
+.deliveryInfo p {
+  text-align: left;
+  font-weight: 400;
+  font-size: 14px;
+  color: #999999;
+  /* background-color: lightcoral; */
+}

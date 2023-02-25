@@ -1,0 +1,59 @@
+.sale::before,
+.priceOriginal::before,
+.priceReal::before {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+.priceInfo {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.sale {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #6b90dc;
+  line-height: 100%;
+  letter-spacing: -0.005em;
+}
+
+.priceBox {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.priceOriginal {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.005em;
+  color: #999999;
+}
+
+.priceReal {
+  font-size: 1.375rem;
+  font-weight: 400;
+  letter-spacing: -0.005em;
+  color: #333333;
+}
+
+.sale::before {
+  content: '할인율';
+}
+
+.priceOriginal::before {
+  content: '정상가';
+}
+
+.priceReal::before {
+  content: '판매가';
+}

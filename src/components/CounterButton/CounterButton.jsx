@@ -1,4 +1,5 @@
-import styles from './counterButton.module.css'
+import React from 'react'
+import styles from './CounterButton.module.css'
 import { useState } from 'react'
 
 export function CounterButton() {
@@ -17,10 +18,10 @@ export function CounterButton() {
   }
 
   return (
-    <>
+    <div className={styles.buttonWrapper}>
       <button onClick={minus}>-</button>
       <span className={styles.value}>{value}</span>
       <button onClick={plus}>+</button>
-    </>
+    </div>
   )
 }
